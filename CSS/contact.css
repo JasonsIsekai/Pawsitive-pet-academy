@@ -1,6 +1,6 @@
 /* Contact page styling */
 body {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('images/contactbackground.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('../images/contactbackground.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

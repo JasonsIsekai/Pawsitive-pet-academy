@@ -1,81 +1,29 @@
-🐾 Pawsitive Pet Academy
+# Pawsitive Pet Academy
 
-Pawsitive Pet Academy is a responsive, interactive web application built for a Durban-based pet care education business. This project serves as a digital storefront to drive multi-course sales, capture client leads, and automate the enrollment quoting process.
+A responsive front-end web application built for a pet care education center based in Durban. This project was developed as a Portfolio of Evidence submission for the Higher Certificate in Mobile Application and Web Development at Emeris.
 
-This project was developed as part of a Higher Certificate group presentation, demonstrating a strong intersection of business logic and front-end web development.
+## 🎯 Business Objectives
+* **Automated Sales & Upselling:** Features a dynamic checkout system that automatically calculates and applies tiered discounts (5% for 2 courses, 10% for 3, 15% for 4+) to encourage multi-course enrollment.
+* **Lead Generation:** Includes dedicated contact and feedback forms to capture customer inquiries and drive future marketing.
+* **Digital Presence:** Transitions a local physical business into a modern, 24/7 accessible digital space.
 
-🚀 Live Demo
+## 💻 Technical Highlights
+* **Cross-Page Cart State:** Utilizes JavaScript `localStorage` to persist user cart selections (Short & Long Courses) seamlessly across different HTML pages.
+* **Dynamic DOM Manipulation:** Extracts pricing and course data directly from custom HTML data attributes (`data-name`, `data-price`) to render the checkout summary.
+* **Responsive UI Design:** Built with CSS Flexbox and Grid to ensure full adaptability across desktop, tablet, and mobile screens.
+* **Interactive Elements:** Features a custom CSS-driven Accordion for the "About Us" section and a multi-step JavaScript modal overlay for the demo checkout process.
 
-(You can add a link to GitHub Pages or your live deployment here once hosted)
+## 🗂️ Project Structure
+* `index.html` - Landing page and business overview
+* `course.html` - Course selection split screen
+* `short-course.html` / `long-course.html` - Course catalogs with selection checkboxes
+* `About.html` - Company history and mission featuring an interactive accordion
+* `contact.html` - Contact information and inquiry forms
+* `/CSS/` - Modular stylesheets (`global.css`, `index.css`, `course.css`, `about us.css`, `contact.css`)
+* `/JS/` - Interactive logic (`checkout.js`, `about.js`, `contact.js`)
+* `/images/` - Site assets and branding
 
-💼 Business Objectives
-
-Increase Sales: Implemented an automated tiered discount system to incentivize multi-course enrollments (e.g., 5% off for 2 courses, 10% off for 3).
-
-Automate Customer Service: Replaced manual quoting with a dynamic, real-time checkout modal that calculates subtotals, discounts, and final totals.
-
-Lead Generation: Integrated user-friendly contact and feedback forms to capture visitor information for future marketing and outreach.
-
-Brand Professionalism: Transitioned a local business into a modern digital space with a cohesive, responsive UI.
-
-✨ Technical Highlights & Features
-
-Cross-Page State Management: Utilized JavaScript's localStorage to persist a user's shopping cart (pawsitiveCart) across different HTML pages (Short Courses vs. Long Courses) without requiring a backend database.
-
-Dynamic DOM Manipulation: Leveraged custom HTML5 data-* attributes (data-name, data-price) to extract course information and dynamically generate the shopping cart summary and pricing logic.
-
-Custom Interactive UI:
-
-Developed a multi-step checkout modal (Summary ➔ Payment Details ➔ Success Confirmation) that overlays the page without a hard refresh.
-
-Built a custom, smoothly animated CSS/JS Accordion for the "About Us" page FAQ section.
-
-Responsive Design: Extensively used CSS Flexbox and CSS Grid (grid-template-columns: repeat(auto-fit, minmax(...))) alongside media queries to ensure the platform is accessible and visually appealing on mobile, tablet, and desktop devices.
-
-🛠️ Built With
-
-HTML5: Semantic markup and structure.
-
-CSS3: Custom styling, variables, Flexbox, Grid, transitions, and glass-morphism effects.
-
-Vanilla JavaScript (ES6+): DOM manipulation, event handling, and Local Storage integration.
-
-📂 Project Structure
-
-├── CSS/
-│   ├── about us.css
-│   ├── contact.css
-│   ├── course.css
-│   ├── global.css      # Core styles, navigation, and footer
-│   └── index.css
-├── JS/
-│   ├── about.js        # Accordion logic
-│   ├── checkout.js     # Cart logic, local storage, and modal handling
-│   └── contact.js      # Form validation (if applicable)
-├── images/             # UI assets and course thumbnails
-├── About.html          # Company history, mission, and vision
-├── contact.html        # Lead generation and contact info
-├── course.html         # Split-screen landing for course types
-├── index.html          # Main landing page
-├── long-course.html    # Professional 6-month courses
-└── short-course.html   # Practical 6-week courses
-
-
-💻 Getting Started
-
-To run this project locally, you don't need any special server configurations or dependencies.
-
-Clone the repository:
-
-git clone https://github.com/your-username/pawsitive-pet-academy.git
-
-
-Navigate to the project directory:
-
-cd pawsitive-pet-academy
-
-
-Open the application:
-Simply double-click index.html to open it in your default web browser, or use a tool like Live Server in VS Code for a better development experience.
-
-Created for a Higher Certificate presentation.
+## 🚀 How to Run
+1. Clone or download this repository.
+2. Open `index.html` in any modern web browser to view the site.
+3. Navigate to the Courses section to test the dynamic checkout and `localStorage` cart functionality.

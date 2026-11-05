@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Pawsitive Pet Academy</title>
+    <link rel="stylesheet" href="CSS/global.css">    
+    <link rel="stylesheet" href="CSS/contact.css">
+    <script src="JS/contact.js" defer></script>
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/P logo.png" alt="Pawsitive Pet Academy Logo">
+                <h1>Pawsitive Pet Academy</h1>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Overview</a></li>
+                    <li><a href="About.html">About Us</a></li>
+
+                    <!-- Courses Dropdown -->
+                    <li class="dropdown">                    
+                        <a href="course.html">Courses <span class="arrow">&#9662;</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="short-course.html">Short Courses</a></li>
+                            <li><a href="long-course.html">Long Courses</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="contact.html" class="active">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contact-container">
+
+        <section class="top-content-section">
+            <div class="sidebar-box">
+                <div class="sidebar-logo">
+                    <img src="images/P logo.png" alt="Pawsitive Pet Academy Logo">
+                </div>
+
+                <!-- Contact Info List -->
+                <ul class="contact-info-list">
+                    <li>Company Number: +277 698 7742</li>
+                    <li>Email: pawsitivepetacademy@gmail.com</li>
+                    <li>Location: 17 Ridge St, Durban</li>
+                </ul>
+                <div class="sidebar-title">Pawsitive Pet Academy</div>
+            </div>
+
+            <!-- Images of Owner and Team -->
+            <div class="images-container">
+                <div class="image-card">
+                    <h2>The owner</h2>
+                    <img src="images/owner image.png" alt="Owner Image">
+                </div>
+                <div class="image-card">
+                    <h2>The Team</h2>
+                    <img src="images/Team image.png" alt="Team image">
+                </div>
+            </div>
+        </section>
+
+        <!-- Forms Section -->
+        <section class="forms-section">
+            <div class="form-box message-form">
+                <h2>LEAVE US A MESSAGE</h2>
+                <form action="#" method="post">
+                    <textarea name="FeedBack" rows="4" placeholder="Write your feedback here..." required></textarea>
+                    <button type="submit" class="submit-btn">SUBMIT</button>
+                </form>
+            </div>
+
+            <!-- Inquiry Form -->
+            <div class="form-box info-form">
+                <h2>LEAVE CONTACT INFORMATION</h2>
+                <form action="#" method="post">
+                    <div class="form-grid">
+                        <div class="input-group">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="surname">Surname:</label>
+                            <input type="text" id="surname" name="surname" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="phone">Phone:</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                    </div>
+                    <button type="submit" class="submit-btn">SUBMIT</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2026 Pawsitive Pet Academy. All rights reserved.</p>
+        <p>Located in Durban | Providing Quality Pet Care Education Since 2023.</p>
+        <p>You can find us on the social platforms:
+            <a href="tel:+2776987742">Call Us Now!</a>
+            <a href="https://x.com" target="_blank">X</a>
+            <a href="https://www.instagram.com" target="_blank">Instagram</a>
+            <a href="https://www.facebook.com" target="_blank">Facebook</a>
+        </p>
+    </footer>
+
+</body>
+
+</html>

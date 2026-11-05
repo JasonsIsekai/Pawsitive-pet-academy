@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses | Pawsitive Pet Academy</title>
+    <link rel="stylesheet" href="CSS/global.css">
+    <link rel="stylesheet" href="CSS/course.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/P logo.png" alt="Pawsitive Pet Academy Logo">
+                <h1>Pawsitive Pet Academy</h1>
+            </div>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Overview</a></li>
+                    <li><a href="About.html">About Us</a></li>
+
+                    <!-- Creating down down box for courses page -->
+                    <li class="dropdown">
+                        <a href="course.html" class="active">Courses<span class="arrow">&#9662;</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="short-course.html">Short Courses</a></li>
+                            <li><a href="long-course.html">Long Courses</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="courses-landing-page">
+        <h1 class="landing-title">Choose Your Learning Path</h1>
+        <!-- Main split screen section -->
+        <div class="split-container">
+            <div class="split-card long-card">
+                <div class="split-content">
+                    <h2>Long Term Courses</h2>
+                    <p>In-depth, 6month long professional courses designed to prepare you
+                        for being an animal owner or to give you the basics to start a career in animal care
+                    </p>
+                    <ul class="preview-list">
+                        <li>Canine Obedience</li>
+                        <li>Pet Grooming</li>
+                        <li>Animal Behaviour</li>
+                        <li>Business Management</li>
+                    </ul>
+                    <button class="split-btn">
+                        <a href="long-course.html">View Long Courses</a>
+                    </button>
+                </div>
+            </div>
+
+            <div class="split-card short-card">
+                <div class="split-content">
+                    <h2>Short Term Courses </h2>
+                    <p>Short term, but in-depth 6-week courses built for the casual 1st time pet owner or if you just
+                        want to be a better pet owner, sitter, or if you just love caring for animals.
+                    </p>
+                    <ul class="preview-list">
+                        <li>Puppy Care</li>
+                        <li>Pet First Aid</li>
+                        <li>Dog Walking</li>
+                    </ul>
+                    <button class="split-btn">
+                        <a href="short-course.html">View Short Courses</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!--Footer section-->
+    <footer>
+        <p>&copy; 2026 Pawsitive Pet Academy. All rights reserved.</p>
+        <p>Located in Durban | Providing Quality Pet Care Education Since 2023.</p>
+        <p>You can find us on the social platforms:
+            <!-- ADDED 'tel:' AND REMOVED SPACES -->
+            <a href="tel:+2776987742">Call Us Now!</a>
+            <a href="https://x.com" target="_blank">X</a>
+            <a href="https://www.instagram.com" target="_blank">Instagram</a>
+            <a href="https://www.facebook.com" target="_blank">Facebook</a>
+        </p>
+    </footer>
+
+</body>
+
+</html>

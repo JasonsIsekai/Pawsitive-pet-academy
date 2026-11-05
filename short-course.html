@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Short Courses | Pawsitive Pet Academy</title>
+    <link rel="stylesheet" href="CSS/global.css">
+    <link rel="stylesheet" href="CSS/course.css">
+    <script src="JS/checkout.js" defer></script>
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/P logo.png" alt="Pawsitive Pet Academy Logo">
+                <h1>Pawsitive Pet Academy</h1>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Overview</a></li>
+                    <li><a href="About.html">About Us</a></li>
+
+                    <!-- Courses Dropdown -->
+                    <li class="dropdown">
+                        <a href="course.html" class="active">Courses <span class="arrow">&#9662;</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="short-course.html" class="active">Short Courses</a></li>
+                            <li><a href="long-course.html">Long Courses</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="courses-container">
+        <h1>Short Course Selection</h1>
+
+        <form action="#" method="post">
+            <fieldset class="course-section">
+                <legend>
+                    <h2>Short Courses</h2>
+                </legend>
+
+                <!-- Course 1 -->
+                <div class="course-card" id="care">
+                    <img src="/images/puppy care.jpg" alt="Puppy Care">
+                    <div class="course-info">
+                        <input type="checkbox" class="course-checkbox" id="care-check" name="course"
+                            value="Puppy Care - R850" data-name="Puppy Care" data-price="850">
+                        <label for="care-check">
+                            <strong>Puppy Care</strong> - R850
+                        </label>
+                        <ul>
+                            <li>Feeding Habits</li>
+                            <li>Needed Vaccinations</li>
+                            <li>Toilet Training</li>
+                            <li>Basic Exercise Routines</li>
+                            <li>Socialisation Classes</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Course 2 -->
+                <div class="course-card" id="firstaid">
+                    <img src="/images/first aid.jpg" alt="Pet First Aid">
+                    <div class="course-info">
+                        <input type="checkbox" class="course-checkbox" id="firstaid-check" name="course"
+                            value="Pet First Aid - R1000" data-name="Pet First Aid" data-price="1000">
+                        <label for="firstaid-check">
+                            <strong>Pet First Aid</strong> - R1000
+                        </label>
+                        <ul>
+                            <li>Minor Injuries</li>
+                            <li>CPR Basics</li>
+                            <li>Poison Awareness</li>
+                            <li>Heatstroke Aid</li>
+                            <li>Emergency Transportation</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Course 3 -->
+                <div class="course-card" id="dogwalking">
+                    <img src="/images/dog walking.jpg" alt="Dog Walking">
+                    <div class="course-info">
+                        <input type="checkbox" class="course-checkbox" id="dogwalking-check" name="course"
+                            value="Dog Walking - R800" data-name="Dog Walking" data-price="800">
+                        <label for="dogwalking-check">
+                            <strong>Dog Walking</strong> - R800
+                        </label>
+                        <ul>
+                            <li>Pack Management & Leash Safety</li>
+                            <li>Reading Dog Body Language</li>
+                            <li>Route Planning & Hazard Control</li>
+                            <li>Basic Outdoor First Aid</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </fieldset>
+
+            <div class="form-actions">
+                <button type="submit" class="submit-btn">Proceed to Checkout</button>
+            </div>
+        </form>
+
+        <!-- CHECKOUT MODAL -->
+        <div id="checkout-modal" class="modal-overlay hidden">
+            <div class="modal-box">
+                <span id="close-modal" class="close-btn">&times;</span>
+
+                <!-- Step 1: Summary -->
+                <div id="modal-step-1">
+                    <h2>Enrollment Summary</h2>
+                    <ul id="summary-list"></ul>
+                    <div class="summary-pricing">
+                        <p>Subtotal: <span id="summary-subtotal">R0</span></p>
+                        <p class="discount-line hidden" id="discount-row">
+                            Discount (<span id="discount-percent">0%</span>):
+                            <span id="summary-discount">-R0</span>
+                        </p>
+                        <p class="modal-total">Total Amount: <strong id="summary-total">R0</strong></p>
+                    </div>
+                    <button type="button" id="to-payment-btn" class="modal-btn">Proceed to Payment</button>
+                </div>
+
+                <!-- Step 2: Payment -->
+                <div id="modal-step-2" class="hidden">
+                    <h2>Payment Details</h2>
+                    <p class="demo-notice"> !!DEMO CHECKOUT!! !!DO NOT USE REAL CARD INFO!!</p>
+
+                    <div class="form-group">
+                        <label for="card-name">Cardholder's Name</label>
+                        <input type="text" id="card-name" placeholder="e.g. Mathew Dlamini" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="card-num">Card Number</label>
+                        <input type="text" id="card-num" placeholder="1111 1111 1111 1111" maxlength="19" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="expiry">Expiry Date</label>
+                            <input type="text" id="expiry" placeholder="MM/YY" maxlength="5" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cvv">CVV</label>
+                            <input type="password" id="cvv" placeholder="123" maxlength="3" required>
+                        </div>
+                    </div>
+                    <button type="button" id="pay-now-btn" class="modal-btn">Pay & Complete Purchase</button>
+                </div>
+
+                <!-- Step 3: Success Confirmation -->
+                <div id="modal-step-3" class="hidden">
+                    <h2>Payment Successful!</h2>
+                    <p>You have successfully enrolled. <strong>Welcome to Pawsitive Pet Academy!</strong></p>
+                    <button type="button" id="finish-btn" class="modal-btn">Close</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer section -->
+    <footer>
+        <p>&copy; 2026 Pawsitive Pet Academy. All rights reserved.</p>
+        <p>Located in Durban | Providing Quality Pet Care Education Since 2023.</p>
+        <p>You can find us on social platforms:
+            <a href="tel:+2776987742">Call Us Now!</a> |
+            <a href="https://x.com" target="_blank">X</a> |
+            <a href="https://www.instagram.com" target="_blank">Instagram</a> |
+            <a href="https://www.facebook.com" target="_blank">Facebook</a>
+        </p>
+    </footer>
+
+</body>
+
+</html>

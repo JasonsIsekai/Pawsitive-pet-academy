@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Long Courses | Pawsitive Pet Academy</title>
+    <link rel="stylesheet" href="CSS/global.css">
+    <link rel="stylesheet" href="CSS/course.css">
+    <script src="JS/checkout.js" defer></script>
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/P logo.png" alt="Pawsitive Pet Academy Logo">
+                <h1>Pawsitive Pet Academy</h1>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Overview</a></li>
+                    <li><a href="About.html">About Us</a></li>
+
+                    <!-- Courses Dropdown -->
+                    <li class="dropdown">                     
+                        <a href="course.html" class="active">Courses <span class="arrow">&#9662;</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="short-course.html">Short Courses</a></li>
+                            <li><a href="long-course.html" class="active">Long Courses</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="courses-container">
+        <h1>Long Course Selection</h1>
+
+        <form action="#" method="post">
+            <fieldset class="course-section">
+                <legend><h2>Long Courses</h2></legend>
+
+                <!-- Course 1 -->
+                <div class="course-card" id="canine">
+                    <img src="/images/obedience!.jpg" alt="Canine Obedience Training">
+                    <div class="course-info">
+                        <input type="checkbox" class="course-checkbox" id="canine-check" name="course"
+                            value="Canine Obedience Training - R1500" data-name="Canine Obedience Training"
+                            data-price="1500">
+                        <label for="canine-check">
+                            <strong>Canine Obedience Training</strong> - R1500
+                        </label>
+                        <ul>
+                            <li>Basic Commands</li>
+                            <li>Leash Control</li>
+                            <li>Behaviour Correction Methods</li>
+                            <li>Positive Reinforcement</li>
+                            <li>Socialisation Techniques</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Course 2 -->
+                <div class="course-card" id="behaviour">
+                    <img src="/images/behaviour.jpg" alt="Animal Behaviour">
+                    <div class="course-info">
+                        <input type="checkbox" class="course-checkbox" id="behaviour-check" name="course"
+                            value="Animal Behaviour - R1800" data-name="Animal Behaviour" data-price="1800">
+                        <label for="behaviour-check">
+                            <strong>Animal Behaviour</strong> - R1800
+                        </label>
+                        <ul>
+                            <li>Animal Psychology Classes</li>
+                            <li>Reading Body Languages</li>
+                            <li>Stress Management Techniques</li>
+                            <li>Enrichment Activities</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Course 3 -->
+                <div class="course-card" id="grooming">
+                    <img src="/images/pet grooming.jpg" alt="Pet Grooming">
+                    <div class="course-info">
+                        <input type="checkbox" class="course-checkbox" id="grooming-check" name="course"
+                            value="Pet Grooming - R1400" data-name="Pet Grooming" data-price="1400">
+                        <label for="grooming-check">
+                            <strong>Pet Grooming</strong> - R1400
+                        </label>
+                        <ul>
+                            <li>Coat Care</li>
+                            <li>Bathing Techniques</li>
+                            <li>Nail Care and Trimming Basics</li>
+                            <li>Grooming Equipment and Maintenance</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Course 4 -->
+                <div class="course-card" id="management">
+                    <img src="/images/business management.jpg" alt="Business Management">
+                    <div class="course-info">
+                        <input type="checkbox" class="course-checkbox" id="management-check" name="course"
+                            value="Business Management - R2000" data-name="Business Management" data-price="2000">
+                        <label for="management-check">
+                            <strong>Business Management</strong> - R2000
+                        </label>
+                        <ul>
+                            <li>Customer Services Classes</li>
+                            <li>Marketing Basics</li>
+                            <li>Business Planning</li>
+                            <li>Legal Requirements</li>
+                            <li>Financial Management</li>
+                        </ul>
+                    </div>
+                </div>                                
+            </fieldset>
+
+            <div class="form-actions">
+                <button type="submit" class="submit-btn">Proceed to Checkout</button>
+            </div>
+        </form>
+
+        <!-- CHECKOUT MODAL -->
+        <div id="checkout-modal" class="modal-overlay hidden">
+            <div class="modal-box">
+                <span id="close-modal" class="close-btn">&times;</span>
+
+                <!-- Step 1: Summary -->
+                <div id="modal-step-1">
+                    <h2>Enrollment Summary</h2>
+                    <ul id="summary-list"></ul>
+                    <div class="summary-pricing">
+                        <p>Subtotal: <span id="summary-subtotal">R0</span></p>
+                        <p class="discount-line hidden" id="discount-row">
+                            Discount (<span id="discount-percent">0%</span>):
+                            <span id="summary-discount">-R0</span>
+                        </p>
+                        <p class="modal-total">Total Amount: <strong id="summary-total">R0</strong></p>
+                    </div>
+                    <button type="button" id="to-payment-btn" class="modal-btn">Proceed to Payment</button>
+                </div>
+
+                <!-- Step 2: Payment -->
+                <div id="modal-step-2" class="hidden">
+                    <h2>Payment Details</h2>
+                    <p class="demo-notice"> !!DEMO CHECKOUT!! !!DO NOT USE REAL CARD INFO!!</p>
+
+                    <div class="form-group">
+                        <label for="card-name-long">Cardholder's Name</label>
+                        <input type="text" id="card-name-long" placeholder="e.g. Mathew Dlamini" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="card-num-long">Card Number</label>
+                        <input type="text" id="card-num-long" placeholder="1111 1111 1111 1111" maxlength="19" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="expiry-long">Expiry Date</label>
+                            <input type="text" id="expiry-long" placeholder="MM/YY" maxlength="5" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cvv-long">CVV</label>
+                            <input type="password" id="cvv-long" placeholder="123" maxlength="3" required>
+                        </div>
+                    </div>
+                    <button type="button" id="pay-now-btn" class="modal-btn">Pay & Complete Purchase</button>
+                </div>
+
+                <!-- Step 3: Success Confirmation -->
+                <div id="modal-step-3" class="hidden">
+                    <h2>Payment Successful!</h2>
+                    <p>You have successfully enrolled. <strong>Welcome to Pawsitive Pet Academy!</strong></p>
+                    <button type="button" id="finish-btn" class="modal-btn">Close</button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer section -->
+    <footer>
+        <p>&copy; 2026 Pawsitive Pet Academy. All rights reserved.</p>
+        <p>Located in Durban | Providing Quality Pet Care Education Since 2023.</p>
+        <p>You can find us on social platforms:
+            <a href="tel:+2776987742">Call Us Now!</a> |
+            <a href="https://x.com" target="_blank">X</a> |
+            <a href="https://www.instagram.com" target="_blank">Instagram</a> |
+            <a href="https://www.facebook.com" target="_blank">Facebook</a>
+        </p>
+    </footer>
+
+</body>
+
+</html>

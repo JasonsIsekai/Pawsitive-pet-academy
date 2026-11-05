@@ -1,6 +1,6 @@
 /* COURSES & SPLIT LANDING PAGE STYLING */
 body {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/images/coursebackground.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/coursebackground.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
